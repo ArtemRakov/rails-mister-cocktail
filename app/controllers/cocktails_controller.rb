@@ -1,4 +1,5 @@
 class CocktailsController < ApplicationController
+  layout "home", only: [:home]
   before_action :set_cocktail, only: [:show]
   def index
     @cocktails = Cocktail.all
@@ -15,11 +16,14 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
-    @cocktail.doses.build
   end
 
   def show
     @dose = Dose.new
+  end
+
+  def home
+    @cocktails = Cocktail.all
   end
 
   private

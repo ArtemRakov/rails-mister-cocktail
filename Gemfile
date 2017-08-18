@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'faker'
 
+gem 'figaro'
 #Front end
 
 gem 'font-awesome-sass'

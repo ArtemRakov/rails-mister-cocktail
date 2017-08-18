@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+
+.icon-container {
+  text-align: center;
+  margin: 100px 0;
+}
+
+.icon-content {
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-family: $headers-font;
+  }
+}
