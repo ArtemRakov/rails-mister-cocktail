@@ -38,8 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'faker'
-
+gem 'cloudinary'
 gem 'figaro'
+gem 'carrierwave', '~> 0.11.2'
 #Front end
 
 gem 'font-awesome-sass'

@@ -38,6 +38,7 @@
   text-decoration: none;
   font-size: 20px;
   color:white;
+  font-family: $headers-font;
   border: 1px solid rgba(0,0,0,0);
   opacity: 0.9;
   &:hover {
@@ -68,7 +69,7 @@ input, select, textarea {
   border-radius: 50%;
 }
 
-
+.form-skel {
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -171,4 +172,4 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #2AA869;
   border-color: #2AA869; }
-
+}

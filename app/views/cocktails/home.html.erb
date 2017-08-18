@@ -14,7 +14,7 @@
       <h1>Create and Find best cocktail</h1>
       <div class="content-search-bar">
         <div class="row">
-          <form action="#" class="form-inline">
+          <form action="#" class="form-inline form-skel">
               <div class="form-group">
                 <input type="text" name="" placeholder="Bloody mary">
               </div>
@@ -59,26 +59,25 @@
   </div>
 </div>
 
-
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        <div class="card-category">Popular</div>
-        <div class="card-description">
-          <h2>Le Wagon Shanghai</h2>
-          <p>Very cool city, the best</p>
-        </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        <a class="card-link" href="#" ></a>
+<div class="wrap">
+  <div class="container">
+    <h2 id="start">All cocktails</h2>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to cocktail_path(cocktail) do  %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path cocktail.photo? ?  cocktail.photo : "lkgaqzb9hc9garraymlm.jpg" %>);">
+            <div class="card-description">
+              <h2> <%=  cocktail.name %> </h2>
+            </div>
+          </div>
+        <% end %>
       </div>
+    <% end %>
     </div>
-  <%= link_to cocktail.name, cocktail_path(cocktail)  %>
-<% end %>
+  <div class="my-btn">
+    <%= link_to "New cocktail", new_cocktail_path, class: ""  %>
   </div>
 </div>
 
-
-<%= link_to "New cocktail", new_cocktail_path  %>
 

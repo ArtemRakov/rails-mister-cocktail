@@ -1,0 +1,92 @@
+.banner-show {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrap-grey {
+  background-color: #F7F7F7;
+  text-align: center;
+}
+
+
+
+.my-form {
+  input[type=text], input[type=password], input[type=email], input[type=search], input[type=number], input[type=file], input[type=tel], input[type=url], select, textarea, textarea[type=text] {
+  width: 100%;
+  height: 45px;
+  padding: 10px 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  background: #F1F1F1;
+  border: 1px solid #a4a4a4;
+  border-radius: 2px;
+  font-family: $body-font;
+  box-sizing: border-box;
+  transition: all .2s ease;
+}
+
+input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, input[type=search]:hover, input[type=number]:hover, input[type=file]:hover, input[type=tel]:hover, input[type=url]:hover, select:hover, textarea:hover, textarea[type=text]:hover {
+  border: 1px solid #111111;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, input[type=number]:focus, input[type=file]:focus, input[type=tel]:focus, input[type=url]:focus, select:focus, textarea:focus, textarea[type=text]:focus {
+  outline: none;
+  border: 1px solid #89BBFE;
+}
+
+textarea, textarea[type=text] {
+  min-height: 7rem;
+}
+
+button, .button, [type=submit] {
+  padding: 10px 25px;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  background: #89BBFE;
+  border: 1.5px solid #89BBFE;
+  border-radius: 2px;
+  transition: all .6s ease;
+  font-family: $body-font;
+}
+
+button.outline, .button.outline, [type=submit].outline {
+  color: white;
+  background: none;
+  border: 1.5px solid #89BBFE;
+}
+
+button:hover, .button:hover, [type=submit]:hover {
+  color: #89BBFE;
+  background: #F7F7F7;
+}
+
+button.outline:hover, .button.outline:hover, [type=submit].outline:hover {
+  background: none;
+  border: 1.5px solid #222222;
+  color: #222222;
+}
+
+button:focus, .button:focus, [type=submit]:focus {
+  outline: none;
+}
+
+button:active, .button:active, [type=submit]:active {
+  transform: scale(.99);
+}
+
+button:disabled, .button:disabled, .button.disabled, [type=submit]:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+}
+
+
+
+
+
+

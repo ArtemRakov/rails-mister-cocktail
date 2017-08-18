@@ -1,23 +1,31 @@
-<%= @cocktail.name %>
+<div class="banner-show" style="background-image: url(<%= cl_image_path @cocktail.photo? ? @cocktail.photo : "lkgaqzb9hc9garraymlm.jpg" %>)">
 
-<% if @cocktail.doses %>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li> <%= dose.description %> ||  <%= dose.ingredient.name  %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete  %> </li>
+</div>
+<div class="wrap-grey">
+  <div class="container">
+   <%= @cocktail.name %>
+
+  <% if @cocktail.doses %>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li> <%= dose.description %> ||  <%= dose.ingredient.name  %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete  %> </li>
+    <% end %>
+  </ul>
   <% end %>
-</ul>
-<% end %>
+  <div class="row">
+    <%= simple_form_for [@cocktail, @dose], html: { class: 'my-form' } do |f| %>
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="">
+      <%= f.input :description, input_html: { class: 'my-forms' } %>
+    </div>
+    <div class="">
+      <%= f.association :ingredient, prompt: "Select", input_html: { class: 'my-forms' } %>
+    </div>
+      <%= f.button :submit, class: "button" %>
+  </div>
+  <% end %>
+  </div>
+  </div>
+</div>
 
-
-
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, prompt: "Select" %>
-  <%= f.submit %>
-<% end %>
-
-
-
-
-<%= link_to "Back", cocktails_path  %>
 
