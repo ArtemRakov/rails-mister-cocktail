@@ -16,10 +16,10 @@
     <%= simple_form_for [@cocktail, @dose], html: { class: 'my-form' } do |f| %>
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
     <div class="">
-      <%= f.input :description, input_html: { class: 'my-forms' } %>
+      <%= f.input :description, input_html: { class: 'my-form' } %>
     </div>
     <div class="">
-      <%= f.association :ingredient, prompt: "Select", input_html: { class: 'my-forms' } %>
+      <%= f.association :ingredient, prompt: "Select", input_html: { class: 'my-form form-style' } %>
     </div>
       <%= f.button :submit, class: "button" %>
   </div>

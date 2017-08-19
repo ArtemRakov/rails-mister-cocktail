@@ -86,7 +86,14 @@ button:disabled, .button:disabled, .button.disabled, [type=submit]:disabled {
 }
 
 
+.my-form-error {
+  border: 1px solid red !important;
+}
 
+
+.my-form-success {
+  border: 1px solid green !important;
+}
 
 
 
