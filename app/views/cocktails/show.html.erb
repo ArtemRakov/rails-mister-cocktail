@@ -25,10 +25,10 @@
     <%= simple_form_for [@cocktail, @dose], html: { class: 'my-form' } do |f| %>
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
     <div class="">
-      <%= f.input :description, input_html: { class: 'my-form' } %>
+      <%= f.input :description, label: 'Description', error: 'Description can not be blank', hint: false, input_html: { class: 'my-form' }, :error_html => { :class => "name_error"} %>
     </div>
     <div class="">
-      <%= f.association :ingredient, prompt: "Select", input_html: { class: 'my-form form-style' } %>
+      <%= f.association :ingredient, prompt: "Select", input_html: { class: 'my-form form-style' }, :error_html => { :class => "name_error"} %>
     </div>
       <%= f.button :submit, class: "button" %>
   </div>

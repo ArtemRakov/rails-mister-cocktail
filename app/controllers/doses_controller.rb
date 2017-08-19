@@ -16,6 +16,10 @@ class DosesController < ApplicationController
     redirect_to cocktail_path(params[:cocktail_id])
   end
 
+  def index
+    redirect_to "cocktail/show"
+  end
+
   private
 
   def dose_params

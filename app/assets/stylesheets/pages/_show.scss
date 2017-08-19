@@ -125,5 +125,10 @@ button:disabled, .button:disabled, .button.disabled, [type=submit]:disabled {
   border: 1px solid green !important;
 }
 
+.name_error {
+  color:red;
+  font-style: bold;
+  font-family: $body-font;
+}
 
 
