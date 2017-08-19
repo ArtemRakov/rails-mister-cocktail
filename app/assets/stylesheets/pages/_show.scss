@@ -9,7 +9,37 @@
   text-align: center;
 }
 
+#header-form {
+font-family: $headers-font;
+font-size: 32px;
+}
 
+#h3-form {
+  font-family: $body-font;
+  font-size: 26px;
+}
+
+.recipe-content {
+  p {
+    font-size: 20px;
+    font-family: $body-font;
+    text-align: left;
+  }
+}
+
+.delete-btn {
+  margin-left: 20px;
+  padding: 7px 17px;
+  text-decoration: none;
+  font-size: 14px;
+  color:white;
+  background-color: #FC3159;
+  border-radius: 20px;
+}
+
+.square-list {
+  font-size: 12px;
+}
 
 .my-form {
   input[type=text], input[type=password], input[type=email], input[type=search], input[type=number], input[type=file], input[type=tel], input[type=url], select, textarea, textarea[type=text] {

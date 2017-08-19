@@ -3,15 +3,24 @@
 </div>
 <div class="wrap-grey">
   <div class="container">
-   <%= @cocktail.name %>
+   <h2 id="header-form"> <%= @cocktail.name %> </h2>
 
   <% if @cocktail.doses %>
-  <ul>
-    <% @cocktail.doses.each do |dose| %>
-    <li> <%= dose.description %> ||  <%= dose.ingredient.name  %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete  %> </li>
-    <% end %>
-  </ul>
+    <h3 id="h3-form"> Recipe </h3>
+    <div class="row">
+        <div class="recipe-content">
+          <% @cocktail.doses.each do |dose| %>
+            <div class="col-xs-2 col-xs-offset-4">
+              <p><i class="fa fa-square square-list" aria-hidden="true"></i> <%= dose.description %> </p>
+            </div>
+            <div class="col-xs-4">
+               <p><%= dose.ingredient.name %> <i class="fa fa-glass" aria-hidden="true"></i> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, class: "delete-btn", data: {confirm: "Are you sure?"}  %> </p>
+            </div>
+          <% end %>
+        </div>
+    </div>
   <% end %>
+  <h3 id="h3-form"> Add more ingredients </h3>
   <div class="row">
     <%= simple_form_for [@cocktail, @dose], html: { class: 'my-form' } do |f| %>
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
