@@ -127,7 +127,11 @@ button:disabled, .button:disabled, .button.disabled, [type=submit]:disabled {
 
 .name_error {
   color:red;
-  font-style: bold;
+  font-weight: bold;
+  font-family: $body-font;
+}
+
+.form_label {
   font-family: $body-font;
 }
 
