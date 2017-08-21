@@ -14,7 +14,6 @@ class CocktailsController < ApplicationController
     end
   end
 
-
   def new
     @cocktail = Cocktail.new
   end
